@@ -1,0 +1,17 @@
+<div class="container p-5">
+  <h1 class="text-dark text-center mb-5">RECIPES</h1>
+  <div class="row">
+    <% @articles.each do |article| %>
+      <div class="col-md-3 mb-4">
+        <div class="card border-primary h-100" style="max-width: 18rem;">
+          <div class="card-header d-flex align-items-center justify-content-center">RECIPE</div>
+          <div class="card-body">
+            <h5 class="card-title text-primary"><%= link_to article.title, article_path(article), class:"text-decoration-none" %></h5>
+            <p class="card-text"><%= article.content %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+    <button class="btn btn-primary col-3 mx-auto text-center p-2 border rounded d-flex align-items-center justify-content-center"><%= link_to 'Create new recipe', new_article_path, class:"text-light text-decoration-none fs-3 text" %></button>
+</div>

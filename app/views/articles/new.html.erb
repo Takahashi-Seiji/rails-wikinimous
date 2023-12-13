@@ -1,0 +1,12 @@
+<div class="container p-5 d-flex flex-column align-items-center justify-content-center text-center">
+  <h1 class="mb-5">NEW RECIPE</h1>
+
+    <%= form_with model: @article do |f| %>
+        <%= f.label :title, class:"form-label" %>
+        <%= f.text_field :title, class:"form-control" %>
+        <%= f.label :content, class:"form-label" %>
+        <%= f.text_area :content, class:"form-control mb-3" %>
+        <%= f.submit class:"btn btn-primary mx-auto" %>
+    <% end %>
+    <button class="btn btn-primary border rounded p-2 m-2"><%= link_to 'Back to Recipes', articles_path, class:"text-light text-decoration-none" %></button>
+</div>
